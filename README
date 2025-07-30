@@ -1,0 +1,99 @@
+Sistema de Gerenciamento Bancário Simples em Python
+📄 Descrição do Projeto
+Este é um sistema de gerenciamento bancário em console desenvolvido em Python, projetado para simular operações bancárias básicas. Ele permite o cadastro de clientes, realização de depósitos, saques, transferências entre contas, consulta de extratos e geração de relatórios, com persistência de dados em arquivo JSON.
+
+O projeto foi construído com foco em Orientação a Objetos para representar os clientes e suas contas, e incorpora validações de entrada para garantir a integridade dos dados.
+
+✨ Funcionalidades
+Cadastro de Clientes: Registre novos clientes com nome, CPF e telefone.
+
+Validação e formatação automática de CPF (formato 000.000.000-00).
+
+Validação e formatação de telefone (para (XX) XXXXX-XXXX ou (XX) XXXX-XXXX).
+
+Verificação de CPF duplicado.
+
+Operações Bancárias:
+
+Depósito: Adicione fundos à conta de um cliente.
+
+Saque: Retire fundos da conta de um cliente, com verificação de saldo.
+
+Transferência: Mova fundos entre duas contas de clientes, com validação de saldo na conta de origem.
+
+Consultas:
+
+Liste todos os clientes cadastrados.
+
+Consulte detalhes de um cliente específico pelo CPF.
+
+Consulte o extrato completo de transações de um cliente.
+
+Identifique clientes com saldo negativo.
+
+Relatórios e Estatísticas:
+
+Exiba o total de saldo em caixa (soma dos saldos de todos os clientes).
+
+Mostre o número total de clientes cadastrados.
+
+Gere um relatório completo de clientes em formato JSON.
+
+Persistência de Dados: Os dados dos clientes são automaticamente salvos em um arquivo clientes.json ao sair do sistema e carregados ao iniciar, garantindo que as informações não sejam perdidas.
+
+🛠️ Tecnologias Utilizadas
+Python 3.x
+
+Módulos Padrão do Python:
+
+re (Expressões Regulares para validação e formatação)
+
+datetime (Manipulação de datas e horas para o histórico)
+
+json (Leitura e escrita de dados em arquivos JSON)
+
+🚀 Como Executar o Projeto
+Siga estes passos para configurar e rodar o projeto em sua máquina local:
+
+Clone o Repositório:
+
+Bash
+
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+cd SEU_REPOSITORIO
+(Lembre-se de substituir SEU_USUARIO e SEU_REPOSITORIO pelo seu usuário e nome do repositório no GitHub.)
+
+Organize os Arquivos (se ainda não o fez):
+Certifique-se de que seus arquivos estão distribuídos da seguinte forma (conforme a estrutura de modularização discutida):
+
+seu_repositorio/
+├── main.py
+├── cliente.py
+├── validacoes.py
+├── data_manager.py
+└── operacoes_bancarias.py
+Execute o Script Principal:
+Abra seu terminal ou prompt de comando na pasta raiz do projeto (seu_repositorio/) e execute:
+
+Bash
+
+python main.py
+Interaja com o Menu:
+O sistema exibirá um menu interativo no console, permitindo que você escolha as operações desejadas.
+
+📂 Estrutura de Pastas (Modularização)
+O projeto está organizado em módulos para facilitar a manutenção e escalabilidade:
+
+main.py: O ponto de entrada principal do sistema, responsável por carregar os dados, exibir o menu e chamar as funções das outras áreas.
+
+cliente.py: Define a classe Cliente, que representa um cliente bancário e encapsula suas propriedades (nome, CPF, saldo, histórico) e métodos (depositar, sacar, transferir, etc.).
+
+validacoes.py: Contém funções utilitárias para validação e formatação de dados de entrada, como CPF e telefone.
+
+data_manager.py: Responsável por gerenciar a leitura e gravação dos dados dos clientes em um arquivo JSON.
+
+operacoes_bancarias.py: Contém as funções que implementam as operações bancárias e de gerenciamento que interagem com a lista de clientes.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT.
